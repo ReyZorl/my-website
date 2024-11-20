@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стильный сайт</title>
+    <style>
+        /* Общие стили */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #1c1c1c;
+            color: #f1f1f1;
+        }
+
+        h1, h2, p {
+            margin: 0;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Заголовок */
+        header {
+            background: linear-gradient(to right, #4CAF50, #2e7d32);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            animation: fadeIn 2s;
+        }
+
+        /* Навигация */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+        }
+
+        nav a {
+            padding: 14px 20px;
+            text-decoration: none;
+            color: white;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: #575757;
+            border-radius: 5px;
+        }
+
+        /* Основной контент */
+        section {
+            padding: 50px 20px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: slideUp 1s forwards;
+        }
+
+        section:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        section:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        /* Карточки */
+        .card {
+            display: inline-block;
+            background: #2c2c2c;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Футер */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Анимации */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать на наш сайт</h1>
+    </header>
+    <nav>
+        <a href="#about">О нас</a>
+        <a href="#services">Услуги</a>
+        <a href="#contact">Контакты</a>
+    </nav>
+    <section id="about">
+        <h2>О нас</h2>
+        <p>Мы создаем инновационные решения для вашего бизнеса!</p>
+    </section>
+    <section id="services">
+        <h2>Наши услуги</h2>
+        <div class="card">
+            <h3>Разработка сайтов</h3>
+            <p>Современные и адаптивные сайты для любого устройства.</p>
+        </div>
+        <div class="card">
+            <h3>Дизайн</h3>
+            <p>Эстетика, удобство и инновации в одном решении.</p>
+        </div>
+        <div class="card">
+            <h3>SEO</h3>
+            <p>Оптимизация и продвижение вашего сайта.</p>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Контакты</h2>
+        <p>Свяжитесь с нами: <a href="mailto:info@example.com">info@example.com</a></p>
+    </section>
+    <footer>
+        &copy; 2024 Стильный сайт. Все права защищены.
+    </footer>
+</body>
+</html>
